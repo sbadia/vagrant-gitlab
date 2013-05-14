@@ -34,9 +34,9 @@ Vagrant::Config.run do |config|
     hq.vm.box     = box_data['name']
     hq.vm.box_url = box_data['url']
 
-    hq.vm.customize [ "modifyvm", :id, 
+    hq.vm.customize [ "modifyvm", :id,
 	"--name", "gitlab_#{box_data['name']}-" + File.stat('.vagrant/machines/gitlab/virtualbox/id').ctime.tv_sec.to_s,
-	"--memory", "2048", 
+	"--memory", "2048",
 	"--cpus", "1"]
     hq.vm.host_name = "gitlab.localdomain.local"
     hq.vm.network :hostonly, "192.168.111.10"
@@ -52,7 +52,7 @@ Vagrant::Config.run do |config|
 
     hq.vm.provision :puppet, :pp_path => "/srv/vagrant-puppet" do |puppet|
       puppet.options = [ "--modulepath", "/srv/puppet_modules", "--certname gitlab_server"]
-      logging = ENV['logging']
+      logging = ENV['LOGGING']
       puppet.options << "--#{logging}" if ["verbose","debug"].include?(logging)
       puppet.manifests_path = "examples"
       puppet.manifest_file = "gitlab.pp"
