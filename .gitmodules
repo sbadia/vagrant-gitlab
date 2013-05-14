@@ -4,10 +4,7 @@
 [submodule "modules/puppetlabs-stdlib"]
 	path = modules/puppetlabs-stdlib
 	url = https://github.com/puppetlabs/puppetlabs-stdlib
-[submodule "modules/mc0e-gitlab_prerequisites"]
-       path = modules/mc0e-gitlab_prerequisites
-       url = https://github.com/mc0e/puppet-gitlab_prerequisites
-[submodule "modules/mc0e-gitlab"]
-       path = modules/mc0e-gitlab
-       url = https://github.com/mc0e/puppet-gitlab
+[submodule "modules/sbadia-gitlab"]
+       path = modules/sbadia-gitlab
+       url = https://github.com/sbadia/puppet-gitlab
 
