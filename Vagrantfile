@@ -37,16 +37,11 @@ Vagrant::Config.run do |config|
     hq.vm.customize [ "modifyvm", :id,
 	"--name", "gitlab_#{box_data['name']}-" + File.stat('.vagrant/machines/gitlab/virtualbox/id').ctime.tv_sec.to_s,
 	"--memory", "2048",
-	"--cpus", "1"]
+	"--cpus", "2"]
     hq.vm.host_name = "gitlab.localdomain.local"
     hq.vm.network :hostonly, "192.168.111.10"
     #
-    # https://github.com/sbadia/puppet-gitlab
-    hq.vm.share_folder "sbadia_gitlab", "/srv/puppet_modules/gitlab", "modules/sbadia-gitlab/"
-    # https://github.com/puppetlabs/puppetlabs-mysql
-    hq.vm.share_folder "puppetlabs_mysql", "/srv/puppet_modules/mysql", "modules/puppetlabs-mysql/"
-    # https://github.com/puppetlabs/puppetlabs-stdlib
-    hq.vm.share_folder "puppetlabs_stdlib", "/srv/puppet_modules/stdlib", "modules/puppetlabs-stdlib/"
+    hq.vm.share_folder "puppet_modules", "/srv/puppet_modules", "modules"
 
     hq.vm.provision :puppet, :pp_path => "/srv/vagrant-puppet" do |puppet|
       puppet.options = [ "--modulepath", "/srv/puppet_modules", "--certname gitlab_server"]
