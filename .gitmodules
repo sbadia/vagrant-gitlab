@@ -8,3 +8,9 @@
 	path = modules/sbadia-gitlab
 	url = https://github.com/sbadia/puppet-gitlab
 
+[submodule "modules/redis"]
+	path = modules/redis
+	url = https://github.com/fsalum/puppet-redis
+[submodule "modules/nginx"]
+	path = modules/nginx
+	url = https://github.com/jfryman/puppet-nginx
