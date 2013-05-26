@@ -34,9 +34,9 @@ node /gitlab_server/ {
       git_comment           => 'GITLab is awesome',
       # Setup gitlab sources and branch (default to GIT proto)
       gitlab_sources        => 'https://github.com/gitlabhq/gitlabhq.git',
-      gitlab_branch         => '5-1-stable',
+      gitlab_branch         => '5-2-stable',
       gitlabshell_sources   => 'https://github.com/gitlabhq/gitlab-shell.git',
-      gitlabshell_branch    => 'v1.3.0',
+      gitlabshell_branch    => 'v1.4.0',
       gitlab_domain         => 'gitlab.localdomain.local',
       gitlab_dbtype         => 'mysql',
       gitlab_dbname         => $gitlab_dbname,
