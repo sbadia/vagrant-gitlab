@@ -8,10 +8,18 @@ node /gitlab_server/ {
   $gitlab_dbuser  = 'labu'
   $gitlab_dbpwd   = 'labpass'
 
-  class { 'gitlab::apt': stage => first; }
+  class { 'apt::update': stage => first; }
+
+  # Manage redis and nginx server
+  class { 'redis': stage => main; }
+  class { 'nginx': stage => main; }
 
   # git://github.com/puppetlabs/puppetlabs-mysql.git
-  class { 'mysql::server': stage => main; }
+  class {
+    'mysql::server':
+      stage   => main,
+      require => Exec['apt_update'];
+  }
 
   mysql::db {
     $gitlab_dbname:

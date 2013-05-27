@@ -1,4 +1,4 @@
-# Configure a GitLab server (gitlab.domain.tld)
+# Configure a Debian based GitLab server (gitlab.domain.tld)
 node /gitlab_server/ {
 
   stage { 'first': before => Stage['main'] }
@@ -9,25 +9,35 @@ node /gitlab_server/ {
   $gitlab_dbpwd   = 'labpass'
 
 
-  class { 'apt': stage => first; }
+  class { 'apt::update': stage => first; }
 
   # Manage redis and nginx server
   class { 'redis': stage => main; }
   class { 'nginx': stage => main; }
 
-  # git://github.com/puppetlabs/puppetlabs-mysql.git
-  class { 'mysql::server': stage   => main; }
+  # git://github.com/puppetlabs/puppetlabs-postgresql.git
+  class {
+    'postgresql::server':
+      stage   => main,
+      require => Exec['apt_update'];
+  }
 
-  mysql::db {
+  postgresql::db {
     $gitlab_dbname:
-      ensure   => 'present',
-      charset  => 'utf8',
       user     => $gitlab_dbuser,
       password => $gitlab_dbpwd,
-      host     => 'localhost',
-      grant    => ['all'],
-      # See http://projects.puppetlabs.com/issues/17802 (thanks Elliot)
-      require  => Class['mysql::config'],
+  }
+
+  postgresql::database_user {
+    $gitlab_dbuser:
+      password_hash => 'foo',
+  }
+
+  postgresql::database_grant{
+    $gitlab_dbname:
+      privilege => 'ALL',
+      db        => $gitlab_dbname,
+      role      => $gitlab_dbuser,
   }
 
   class {
@@ -40,7 +50,7 @@ node /gitlab_server/ {
       # Setup gitlab sources and branch (default to GIT proto)
       gitlab_sources    => 'https://github.com/gitlabhq/gitlabhq.git',
       gitlab_domain     => 'gitlab.localdomain.local',
-      gitlab_dbtype     => 'mysql',
+      gitlab_dbtype     => 'pgsql',
       gitlab_dbname     => $gitlab_dbname,
       gitlab_dbuser     => $gitlab_dbuser,
       gitlab_dbpwd      => $gitlab_dbpwd,
