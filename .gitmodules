@@ -13,6 +13,3 @@
 [submodule "modules/gitlab"]
 	path = modules/gitlab
 	url = https://github.com/sbadia/puppet-gitlab
-[submodule "modules/apt"]
-	path = modules/apt
-	url = https://github.com/puppetlabs/puppetlabs-apt
