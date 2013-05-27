@@ -35,7 +35,7 @@ Vagrant::Config.run do |config|
     hq.vm.box_url = box_data['url']
 
     hq.vm.customize [ "modifyvm", :id,
-	"--name", "gitlab_#{box_data['name']}-" + File.stat('.vagrant/machines/gitlab/virtualbox/id').ctime.tv_sec.to_s,
+	"--name", "gitlab_#{box_data['name']}",
 	"--memory", "2048",
 	"--cpus", "2"]
     hq.vm.host_name = "gitlab.localdomain.local"
