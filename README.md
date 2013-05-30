@@ -54,7 +54,7 @@ or
 Providing the _logging_ environment variable you can enable puppet _verbose_ or _debug_ log levels.
 Example:
 
-    LOGGING=debug GUEST\OS=ubuntu vagrant up
+    LOGGING=debug GUEST_OS=ubuntu vagrant up
 
 ## GitLab web interface
 - add the ip and name to your /etc/hosts file (192.168.111.10 gitlab.localdomain.local)

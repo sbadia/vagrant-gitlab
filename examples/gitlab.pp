@@ -15,6 +15,29 @@ node /gitlab_server/ {
   class { 'redis': stage => main; }
   class { 'nginx': stage => main; }
 
+  class {
+    'ruby':
+      stage           => main,
+      version         => '1.9.3',
+      gems_version    => 'absent',
+      rubygems_update => false
+  }
+
+  class { 'ruby::dev': stage => main }
+
+  if $::lsbdistcodename == 'precise' {
+    exec {
+      'ruby-version':
+        command     => '/usr/bin/update-alternatives --set ruby /usr/bin/ruby1.9.1',
+        user        => root,
+        logoutput   => 'on_failure';
+      'gem-version':
+        command     => '/usr/bin/update-alternatives --set gem /usr/bin/gem1.9.1',
+        user        => root,
+        logoutput   => 'on_failure';
+    }
+  }
+
   # git://github.com/puppetlabs/puppetlabs-mysql.git
   class { 'mysql::server': stage   => main; }
 
