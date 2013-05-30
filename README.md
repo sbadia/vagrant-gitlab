@@ -9,8 +9,6 @@ build alongsideother configuration.
 The idea is to split sbadia's project into 3 parts.
 
 * puppet-gitlab will provide only the gitlab specific stuff
-* puppet-gitlab\_prerequisites will provide all the prerequisites that gitlab
-  requires.  If it can be a bit modular that's good.
 * vagrant-gitlab will provide a vagrant project which uses the above as sub-projects.
 
 ---
@@ -21,11 +19,19 @@ The idea is to split sbadia's project into 3 parts.
 
 After cloning this repository, you will have to
 
-    git submodule init
+    gem install librarian-puppet
+
+or  (on jessie)
+
+    apt-get install librarian-puppet
+
+or (on arch, with AUR)
+
+    pacman -Syu librarian-puppet
 
 and
 
-    git submodule update
+    librarian-puppet install
 
 in order to add the modules that puppet-gitlab depends on to your local copy.
 
@@ -33,15 +39,15 @@ in order to add the modules that puppet-gitlab depends on to your local copy.
 
     vagrant up
 or
-    GUEST\_OS=debian7 vagrant up
+    GUEST_OS=debian7 vagrant up
 
 ### Using Centos 6
 
-    GUEST\_OS=centos6 vagrant up
+    GUEST_OS=centos6 vagrant up
 
 ### Using Ubuntu Quantal Quetzal (12.10)
 
-    GUEST\_OS=ubuntu vagrant up
+    GUEST_OS=ubuntu vagrant up
 
 ### Puppet logging
 
