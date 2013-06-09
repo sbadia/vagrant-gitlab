@@ -18,14 +18,25 @@ node /gitlab_server/ {
   class {
     'ruby':
       stage           => main,
-      version         => '1.9.3',
-      gems_version    => 'absent',
-      rubygems_update => false
+      version         => $ruby_version,
+      rubygems_update => false;
   }
 
-  class { 'ruby::dev': stage => main }
+  class {
+    'ruby::dev':
+      stage   => main,
+      require => Class['ruby']
+  }
 
   if $::lsbdistcodename == 'precise' {
+    package {
+      ['build-essential','libssl-dev','libgdbm-dev','libreadline-dev',
+      'libncurses5-dev','libffi-dev','libcurl4-openssl-dev']:
+        ensure => installed;
+    }
+
+    $ruby_version = '4.9'
+
     exec {
       'ruby-version':
         command     => '/usr/bin/update-alternatives --set ruby /usr/bin/ruby1.9.1',
@@ -36,6 +47,8 @@ node /gitlab_server/ {
         user        => root,
         logoutput   => 'on_failure';
     }
+  } else {
+    $ruby_version = '1:1.9.3'
   }
 
   # git://github.com/puppetlabs/puppetlabs-mysql.git
