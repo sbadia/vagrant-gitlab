@@ -1,25 +1,24 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    fsalum/redis (0.0.4)
+    fsalum/redis (0.0.5)
     puppetlabs/mysql (0.6.1)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/nginx (0.0.1)
       puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/ruby (0.0.2)
     puppetlabs/stdlib (4.1.0)
-
-GIT
-  remote: git://github.com/fsalum/puppet-redis.git
-  ref: master
-  sha: 55e9be25b56cf4f46439cdb73fa5915916ca9002
-  specs:
-    redis (0.0.4)
+    sbadia/gitlab (0.0.8)
+      fsalum/redis (>= 0.0.5)
+      puppetlabs/mysql (>= 0.6.1)
+      puppetlabs/nginx (>= 0.0.1)
+      puppetlabs/ruby (>= 0.0.2)
+      puppetlabs/stdlib (>= 4.1.0)
 
 GIT
   remote: git://github.com/jfryman/puppet-nginx.git
   ref: master
-  sha: 48370340b8f52922de3f10c197c524901f2713bc
+  sha: 96af4c84afffe2ecff3041413fc39d0d7cf714d6
   specs:
     nginx (0.0.1)
       puppetlabs/stdlib (>= 0.1.6)
@@ -31,21 +30,8 @@ GIT
   specs:
     apt (0.0.1)
 
-GIT
-  remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: ruby_testing
-  sha: a08d856a101d0f4a062fce68c417d6c2cd86de14
-  specs:
-    gitlab (0.0.7)
-      fsalum/redis (>= 0.0.4)
-      puppetlabs/mysql (>= 0.6.1)
-      puppetlabs/nginx (>= 0.0.1)
-      puppetlabs/ruby (>= 0.0.2)
-      puppetlabs/stdlib (>= 4.1.0)
-
 DEPENDENCIES
   apt (>= 0)
-  gitlab (>= 0)
   nginx (>= 0)
-  redis (>= 0)
+  sbadia/gitlab (= 0.0.8)
 
