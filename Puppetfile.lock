@@ -8,12 +8,6 @@ FORGE
       puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/ruby (0.0.2)
     puppetlabs/stdlib (4.1.0)
-    sbadia/gitlab (0.0.8)
-      fsalum/redis (>= 0.0.5)
-      puppetlabs/mysql (>= 0.6.1)
-      puppetlabs/nginx (>= 0.0.1)
-      puppetlabs/ruby (>= 0.0.2)
-      puppetlabs/stdlib (>= 4.1.0)
 
 GIT
   remote: git://github.com/jfryman/puppet-nginx.git
@@ -30,8 +24,20 @@ GIT
   specs:
     apt (0.0.1)
 
+GIT
+  remote: git://github.com/sbadia/puppet-gitlab.git
+  ref: master
+  sha: afb1c445df48316d18ae02473e7f25712f55e78c
+  specs:
+    gitlab (0.0.8)
+      fsalum/redis (>= 0.0.5)
+      puppetlabs/mysql (>= 0.6.1)
+      puppetlabs/nginx (>= 0.0.1)
+      puppetlabs/ruby (>= 0.0.2)
+      puppetlabs/stdlib (>= 4.1.0)
+
 DEPENDENCIES
   apt (>= 0)
+  gitlab (>= 0)
   nginx (>= 0)
-  sbadia/gitlab (= 0.0.8)
 
