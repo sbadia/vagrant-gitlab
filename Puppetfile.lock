@@ -12,7 +12,7 @@ FORGE
 GIT
   remote: git://github.com/jfryman/puppet-nginx.git
   ref: master
-  sha: 96af4c84afffe2ecff3041413fc39d0d7cf714d6
+  sha: 92fb4ae7016b8944c6da7fcd05a3970df71a1a10
   specs:
     nginx (0.0.1)
       puppetlabs/stdlib (>= 0.1.6)
@@ -27,7 +27,7 @@ GIT
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
   ref: master
-  sha: afb1c445df48316d18ae02473e7f25712f55e78c
+  sha: 5c4a03f207e06cd287bd32a3cc0617f9f4870982
   specs:
     gitlab (0.0.8)
       fsalum/redis (>= 0.0.5)
