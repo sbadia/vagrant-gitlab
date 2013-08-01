@@ -15,7 +15,7 @@ type = ENV['GUEST_OS'] || default_type
 boxes = {
   'debian7' => {
     'name'  => 'debian-wheezy-amd64',
-    'url'   => 'https://vagrant.irisa.fr/boxes/debian-wheezy-x64-puppet_3.0.1.box'
+    'url'   => 'http://pub.sebian.fr/pub/vagrant/debian-wheezy-amd64.box'
   },
   'ubuntu' => {
     'name'  => 'ubuntu-server-amd64',
