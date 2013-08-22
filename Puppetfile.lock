@@ -12,9 +12,9 @@ FORGE
 GIT
   remote: git://github.com/jfryman/puppet-nginx.git
   ref: master
-  sha: 4f5ea94b46e2cb84b9f45f29f247e3609c1f7e38
+  sha: 304c12974ebb29d593ccfee634ddcfe37d1da57a
   specs:
-    nginx (0.0.1)
+    nginx (0.0.3)
       puppetlabs/stdlib (>= 0.1.6)
 
 GIT
