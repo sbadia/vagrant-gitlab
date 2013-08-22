@@ -6,6 +6,6 @@ mod "apt",
 #mod "sbadia/gitlab", "0.0.8"
 mod "gitlab",
     :git => "git://github.com/sbadia/puppet-gitlab.git",
-    :ref => 'master'
+    :ref => '6.0'
 mod "nginx",
     :git => "git://github.com/jfryman/puppet-nginx.git"

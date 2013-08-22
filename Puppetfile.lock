@@ -1,7 +1,7 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    fsalum/redis (0.0.5)
+    fsalum/redis (0.0.6)
     puppetlabs/mysql (0.9.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/nginx (0.0.1)
@@ -26,8 +26,8 @@ GIT
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: master
-  sha: 3b93bb6b04c905cbf63b7ee3f67ba2778b5be110
+  ref: 6.0
+  sha: 6a8bc5999575bbed9698e61b5d536928051ea215
   specs:
     gitlab (0.0.8)
       fsalum/redis (>= 0.0.5)
