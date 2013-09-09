@@ -26,8 +26,8 @@ GIT
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: 6.0
-  sha: 6a8bc5999575bbed9698e61b5d536928051ea215
+  ref: master
+  sha: f2c784e5e62535e2370838b1e594d3575e4325d6
   specs:
     gitlab (0.0.8)
       fsalum/redis (>= 0.0.5)
