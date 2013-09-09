@@ -13,6 +13,11 @@ node /gitlab_server/ {
   include redis
   include nginx
 
+  file { '/etc/nginx/conf.d/default.conf':
+    ensure  => absent,
+    require => Class['nginx'],
+  }
+
   class {
     'ruby':
       version         => $ruby_version,
