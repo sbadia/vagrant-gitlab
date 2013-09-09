@@ -16,6 +16,7 @@ node /gitlab_server/ {
   file { '/etc/nginx/conf.d/default.conf':
     ensure  => absent,
     require => Class['nginx'],
+    notify  => Class['nginx::service'],
   }
 
   class {
