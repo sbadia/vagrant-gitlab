@@ -29,24 +29,24 @@ boxes = {
 
 box_data = boxes[type] || boxes[default_type]
 
-Vagrant::Config.run do |config|
+Vagrant.configure('2') do |config|
   config.vm.define :gitlab do |hq|
     hq.vm.box     = box_data['name']
     hq.vm.box_url = box_data['url']
-
-    hq.vm.customize [ "modifyvm", :id,
+    hq.vm.hostname = "gitlab.localdomain.local"
+    hq.vm.network :private_network, ip: "192.168.111.10"
+    hq.vm.provider :virtualbox do |vb|
+      vb.customize [ "modifyvm", :id,
 	"--name", "gitlab_#{box_data['name']}",
 	"--memory", "2048",
 	"--cpus", "2"]
-    hq.vm.host_name = "gitlab.localdomain.local"
-    hq.vm.network :hostonly, "192.168.111.10"
-    #
-    hq.vm.share_folder "puppet_modules", "/srv/puppet_modules", "modules"
+    end
 
     hq.vm.provision :puppet, :pp_path => "/srv/vagrant-puppet" do |puppet|
-      puppet.options = [ "--modulepath", "/srv/puppet_modules", "--certname gitlab_server"]
+      puppet.options = ["--certname gitlab_server"]
       logging = ENV['LOGGING']
       puppet.options << "--#{logging}" if ["verbose","debug"].include?(logging)
+      puppet.module_path = "modules"
       puppet.manifests_path = "examples"
       puppet.manifest_file = "gitlab.pp"
     end
