@@ -2,7 +2,7 @@ FORGE
   remote: http://forge.puppetlabs.com
   specs:
     fsalum/redis (0.0.6)
-    puppetlabs/mysql (0.9.0)
+    puppetlabs/mysql (1.0.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/nginx (0.0.1)
       puppetlabs/stdlib (>= 0.1.6)
@@ -26,8 +26,8 @@ GIT
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: master
-  sha: f2c784e5e62535e2370838b1e594d3575e4325d6
+  ref: atomaka-feature-contain
+  sha: 800c174f59d8bfbe930943dd0d4696e250486244
   specs:
     gitlab (0.0.8)
       fsalum/redis (>= 0.0.5)

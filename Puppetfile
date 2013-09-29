@@ -5,6 +5,7 @@ mod "apt",
     :git => "git://github.com/sbadia/gitlab-apt.git"
 #mod "sbadia/gitlab", "0.0.8"
 mod "gitlab",
-    :git => "git://github.com/sbadia/puppet-gitlab.git"
+    :git  => "git://github.com/sbadia/puppet-gitlab.git",
+    :ref  => 'atomaka-feature-contain'
 mod "nginx",
     :git => "git://github.com/jfryman/puppet-nginx.git"
