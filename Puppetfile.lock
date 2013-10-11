@@ -2,20 +2,34 @@ FORGE
   remote: http://forge.puppetlabs.com
   specs:
     fsalum/redis (0.0.6)
-    puppetlabs/mysql (1.0.0)
-      puppetlabs/stdlib (>= 2.2.1)
-    puppetlabs/nginx (0.0.1)
+    jfryman/nginx (0.0.5)
       puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/ruby (0.0.2)
+    puppetlabs/git (0.0.3)
+    puppetlabs/mysql (0.6.1)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/ruby (0.1.0)
     puppetlabs/stdlib (4.1.0)
 
 GIT
-  remote: git://github.com/jfryman/puppet-nginx.git
-  ref: master
-  sha: 304c12974ebb29d593ccfee634ddcfe37d1da57a
+  remote: git://github.com/atomaka/puppet-gitlab-requirements
+  ref: feature/working
+  sha: 95b3d3f272e0b8a7ffe1673461b80c71da8b9b67
   specs:
-    nginx (0.0.3)
-      puppetlabs/stdlib (>= 0.1.6)
+    gitlab_requirments (0.0.2)
+      fsalum/redis (>= 0.0.5)
+      jfryman/nginx (>= 0.0.2)
+      puppetlabs/git (>= 0.0.2)
+      puppetlabs/mysql (= 0.6.1)
+      puppetlabs/ruby (>= 0.1.0)
+      puppetlabs/stdlib (>= 2.2.1)
+
+GIT
+  remote: git://github.com/atomaka/puppet-gitlab.git
+  ref: feature-contain
+  sha: c79f40bd4c65c8bb696845963138c8e04512da14
+  specs:
+    gitlab (0.1.0)
+      puppetlabs/stdlib (>= 4.1.0)
 
 GIT
   remote: git://github.com/sbadia/gitlab-apt.git
@@ -24,20 +38,8 @@ GIT
   specs:
     apt (0.0.1)
 
-GIT
-  remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: atomaka-feature-contain
-  sha: 800c174f59d8bfbe930943dd0d4696e250486244
-  specs:
-    gitlab (0.0.8)
-      fsalum/redis (>= 0.0.5)
-      puppetlabs/mysql (>= 0.6.1)
-      puppetlabs/nginx (>= 0.0.1)
-      puppetlabs/ruby (>= 0.0.2)
-      puppetlabs/stdlib (>= 4.1.0)
-
 DEPENDENCIES
   apt (>= 0)
   gitlab (>= 0)
-  nginx (>= 0)
+  gitlab_requirments (>= 0)
 
