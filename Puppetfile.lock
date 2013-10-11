@@ -11,11 +11,11 @@ FORGE
     puppetlabs/stdlib (4.1.0)
 
 GIT
-  remote: git://github.com/atomaka/puppet-gitlab-requirements
-  ref: feature/working
-  sha: 95b3d3f272e0b8a7ffe1673461b80c71da8b9b67
+  remote: git://github.com/sbadia/puppet-gitlab-requirements
+  ref: master
+  sha: 92f9ee72e47a2c90e3db4eb9c48bbf8f397ab17c
   specs:
-    gitlab_requirments (0.0.2)
+    gitlab_requirements (0.0.2)
       fsalum/redis (>= 0.0.5)
       jfryman/nginx (>= 0.0.2)
       puppetlabs/git (>= 0.0.2)
@@ -24,22 +24,14 @@ GIT
       puppetlabs/stdlib (>= 2.2.1)
 
 GIT
-  remote: git://github.com/atomaka/puppet-gitlab.git
-  ref: feature-contain
-  sha: c79f40bd4c65c8bb696845963138c8e04512da14
+  remote: git://github.com/sbadia/puppet-gitlab.git
+  ref: master
+  sha: ab632545a2f2524a227f65e22087a201032c4b0f
   specs:
     gitlab (0.1.0)
       puppetlabs/stdlib (>= 4.1.0)
 
-GIT
-  remote: git://github.com/sbadia/gitlab-apt.git
-  ref: master
-  sha: 2053ea8cfbb62ae05d20a18fdfb4d299ace25372
-  specs:
-    apt (0.0.1)
-
 DEPENDENCIES
-  apt (>= 0)
   gitlab (>= 0)
-  gitlab_requirments (>= 0)
+  gitlab_requirements (>= 0)
 

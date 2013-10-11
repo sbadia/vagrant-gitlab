@@ -1,9 +1,9 @@
 # vagrant-gitlab
 
 This is a fork from https://github.com/mc0e/puppet-gitlab.git, which builds
-github from the ground up as a virtual machine using vagrant.
+gitlab from the ground up as a virtual machine using vagrant.
 
-I want to make the github specific part modular so it can be used with a puppet
+I want to make the gitlab specific part modular so it can be used with a puppet
 build alongsideother configuration.
 
 The idea is to split sbadia's project into 3 parts.
@@ -40,14 +40,6 @@ in order to add the modules that puppet-gitlab depends on to your local copy.
     vagrant up
 or
     GUEST_OS=debian7 vagrant up
-
-### Using Centos 6
-
-    GUEST_OS=centos6 vagrant up
-
-### Using Ubuntu Quantal Quetzal (12.10)
-
-    GUEST_OS=ubuntu vagrant up
 
 ### Puppet logging
 
