@@ -16,14 +16,6 @@ boxes = {
   'debian7' => {
     'name'  => 'debian-wheezy-amd64',
     'url'   => 'http://pub.sebian.fr/pub/vagrant/debian-wheezy-amd64.box'
-  },
-  'ubuntu' => {
-    'name'  => 'ubuntu-server-amd64',
-    'url'   => 'http://sroegner-vagrant.s3.amazonaws.com/ubuntu_srv_12.10-amd64.box'
-  },
-  'centos6' => {
-    'name'  => 'centos6.gitlab',
-    'url'   => 'http://sroegner-vagrant.s3.amazonaws.com/gitlab-centos6-VirtualBox-4.2.6.box'
   }
 }
 
