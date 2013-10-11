@@ -15,7 +15,6 @@ node /gitlab_server/ {
 
   file { '/etc/nginx/conf.d/default.conf':
     ensure  => absent,
-    require => Class['nginx'],
     notify  => Class['nginx::service'],
   }
 
@@ -28,7 +27,7 @@ node /gitlab_server/ {
   class {
     'ruby::dev':
       require => Class['ruby'],
-      before  => Class['gitlab::pre'],
+      before  => Class['gitlab::setup'],
   }
 
   if $::lsbdistcodename == 'precise' {
@@ -36,7 +35,7 @@ node /gitlab_server/ {
       ['build-essential','libssl-dev','libgdbm-dev','libreadline-dev',
       'libncurses5-dev','libffi-dev','libcurl4-openssl-dev']:
         ensure => installed,
-        before => Class['gitlab::pre'],
+        before => Class['gitlab::setup'],
     }
 
     $ruby_version = '4.9'
@@ -46,12 +45,12 @@ node /gitlab_server/ {
         command     => '/usr/bin/update-alternatives --set ruby /usr/bin/ruby1.9.1',
         user        => root,
         logoutput   => 'on_failure',
-        before      => Class['gitlab::pre'];
+        before      => Class['gitlab::setup'];
       'gem-version':
         command     => '/usr/bin/update-alternatives --set gem /usr/bin/gem1.9.1',
         user        => root,
         logoutput   => 'on_failure',
-        before      => Class['gitlab::pre'];
+        before      => Class['gitlab::setup'];
     }
   } else {
     $ruby_version = '1:1.9.3'
@@ -70,7 +69,7 @@ node /gitlab_server/ {
       grant    => ['all'],
       # See http://projects.puppetlabs.com/issues/17802 (thanks Elliot)
       require  => Class['mysql::config'],
-      before   => Class['gitlab::pre'],
+      before   => Class['gitlab::setup'],
   }
 
   class {
