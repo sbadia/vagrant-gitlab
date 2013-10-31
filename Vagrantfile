@@ -34,7 +34,7 @@ Vagrant.configure('2') do |config|
 	"--cpus", "2"]
     end
 
-    hq.vm.provision :puppet, :pp_path => "/srv/vagrant-puppet" do |puppet|
+    hq.vm.provision :puppet do |puppet|
       puppet.options = ["--certname gitlab_server"]
       logging = ENV['LOGGING']
       puppet.options << "--#{logging}" if ["verbose","debug"].include?(logging)
