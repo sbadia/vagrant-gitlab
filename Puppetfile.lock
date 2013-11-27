@@ -25,11 +25,11 @@ GIT
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: 6-3
-  sha: 24183bba3530eed4257bf08e373c6bbe45bfcae4
+  ref: master
+  sha: 4cbdf97da2240577713e5a12b80b512806523ab2
   specs:
-    gitlab (0.0.10)
-      puppetlabs/stdlib (>= 0)
+    gitlab (0.1.0)
+      puppetlabs/stdlib (>= 3.1.0)
 
 DEPENDENCIES
   gitlab (>= 0)
