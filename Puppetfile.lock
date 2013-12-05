@@ -2,18 +2,22 @@ FORGE
   remote: http://forge.puppetlabs.com
   specs:
     fsalum/redis (0.0.6)
-    jfryman/nginx (0.0.5)
+    jfryman/nginx (0.0.6)
+      puppetlabs/apt (>= 1.0.0)
       puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/apt (1.4.0)
+      puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/git (0.0.3)
     puppetlabs/mysql (0.6.1)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/ruby (0.1.0)
     puppetlabs/stdlib (4.1.0)
+    rodjek/logrotate (1.1.1)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
   ref: master
-  sha: 92f9ee72e47a2c90e3db4eb9c48bbf8f397ab17c
+  sha: 35580c890a83cb8dad812a33566af2691aa03d70
   specs:
     gitlab_requirements (0.0.2)
       fsalum/redis (>= 0.0.5)
@@ -22,13 +26,14 @@ GIT
       puppetlabs/mysql (= 0.6.1)
       puppetlabs/ruby (>= 0.1.0)
       puppetlabs/stdlib (>= 2.2.1)
+      rodjek/logrotate (>= 1.0.0)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
   ref: master
-  sha: 4cbdf97da2240577713e5a12b80b512806523ab2
+  sha: a656d83041a893933675fb90e8c3b1c58361d74b
   specs:
-    gitlab (0.1.0)
+    gitlab (0.1.1)
       puppetlabs/stdlib (>= 3.1.0)
 
 DEPENDENCIES
