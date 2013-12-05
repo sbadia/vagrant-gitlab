@@ -1,6 +1,7 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
+    evenup/logrotate (1.0.3)
     fsalum/redis (0.0.6)
     jfryman/nginx (0.0.6)
       puppetlabs/apt (>= 1.0.0)
@@ -12,21 +13,20 @@ FORGE
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/ruby (0.1.0)
     puppetlabs/stdlib (4.1.0)
-    rodjek/logrotate (1.1.1)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
   ref: master
-  sha: 35580c890a83cb8dad812a33566af2691aa03d70
+  sha: aac075328fed1523245c0d84c738686292d55058
   specs:
     gitlab_requirements (0.0.2)
+      evenup/logrotate (>= 1.0.3)
       fsalum/redis (>= 0.0.5)
       jfryman/nginx (>= 0.0.2)
       puppetlabs/git (>= 0.0.2)
       puppetlabs/mysql (= 0.6.1)
       puppetlabs/ruby (>= 0.1.0)
       puppetlabs/stdlib (>= 2.2.1)
-      rodjek/logrotate (>= 1.0.0)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
