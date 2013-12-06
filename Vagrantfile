@@ -11,14 +11,7 @@
 
 default_type = 'debian7'
 type = ENV['GUEST_OS'] || default_type
-
-boxes = {
-  'debian7' => {
-    'name'  => 'debian-wheezy-amd64',
-    'url'   => 'http://pub.sebian.fr/pub/vagrant/debian-wheezy-amd64.box'
-  }
-}
-
+boxes = YAML.load_file(File.join(File.dirname(__FILE__),'boxes.yml'))
 box_data = boxes[type] || boxes[default_type]
 
 Vagrant.configure('2') do |config|

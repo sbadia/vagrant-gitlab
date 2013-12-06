@@ -1,0 +1,4 @@
+---
+debian7:
+  name: debian-wheezy-amd64
+  url: http://pub.sebian.fr/pub/vagrant/debian-wheezy-amd64.box
