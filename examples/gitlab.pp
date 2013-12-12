@@ -22,6 +22,7 @@ node /gitlab_server/ {
       git_email           => 'notifs@foobar.fr',
       git_comment         => 'GitLab',
       gitlab_sources      => 'https://github.com/gitlabhq/gitlabhq.git',
+      gitlabshell_branch  => '9e00fb4078ca8a168687f876c1f6a98198a68155',
       gitlab_domain       => 'gitlab.localdomain.local',
       gitlab_http_timeout => '300',
       gitlab_dbtype       => 'mysql',
