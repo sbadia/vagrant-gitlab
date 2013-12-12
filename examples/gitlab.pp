@@ -17,17 +17,18 @@ node /gitlab_server/ {
 
   class {
     'gitlab':
-      git_user       => 'git',
-      git_home       => '/home/git',
-      git_email      => 'notifs@foobar.fr',
-      git_comment    => 'GitLab',
-      gitlab_sources => 'https://github.com/gitlabhq/gitlabhq.git',
-      gitlab_domain  => 'gitlab.localdomain.local',
-      gitlab_dbtype  => 'mysql',
-      gitlab_dbname  => $gitlab_dbname,
-      gitlab_dbuser  => $gitlab_dbuser,
-      gitlab_dbpwd   => $gitlab_dbpwd,
-      ldap_enabled   => false,
+      git_user            => 'git',
+      git_home            => '/home/git',
+      git_email           => 'notifs@foobar.fr',
+      git_comment         => 'GitLab',
+      gitlab_sources      => 'https://github.com/gitlabhq/gitlabhq.git',
+      gitlab_domain       => 'gitlab.localdomain.local',
+      gitlab_http_timeout => '300',
+      gitlab_dbtype       => 'mysql',
+      gitlab_dbname       => $gitlab_dbname,
+      gitlab_dbuser       => $gitlab_dbuser,
+      gitlab_dbpwd        => $gitlab_dbpwd,
+      ldap_enabled        => false,
   }
 
   Class['gitlab_requirements'] -> Class['gitlab'] ->
