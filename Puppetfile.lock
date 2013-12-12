@@ -2,7 +2,7 @@ FORGE
   remote: http://forge.puppetlabs.com
   specs:
     evenup/logrotate (1.0.3)
-    fsalum/redis (0.0.6)
+    fsalum/redis (0.0.7)
     jfryman/nginx (0.0.6)
       puppetlabs/apt (>= 1.0.0)
       puppetlabs/stdlib (>= 0.1.6)
@@ -32,7 +32,7 @@ GIT
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
   ref: master
-  sha: 8481b6fdaed4f18b5eb04bf39c9d3bc8be75f6a1
+  sha: 5b9986a2b377083f12b0d042fe5f4096f17f3701
   specs:
     gitlab (0.1.1)
       puppetlabs/stdlib (>= 3.1.0)
