@@ -9,6 +9,8 @@
 # For centos 6 dev
 # $ GUEST_OS=centos6 vagrant up
 
+require 'yaml'
+
 default_type = 'debian7'
 type = ENV['GUEST_OS'] || default_type
 boxes = YAML.load_file(File.join(File.dirname(__FILE__),'boxes.yml'))
