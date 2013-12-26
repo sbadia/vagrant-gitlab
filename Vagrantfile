@@ -22,6 +22,7 @@ Vagrant.configure('2') do |config|
     hq.vm.box_url = box_data['url']
     hq.vm.hostname = "gitlab.localdomain.local"
     hq.vm.network :private_network, ip: "192.168.111.10"
+    hq.vm.network :forwarded_port, guest: 80, host: 8080
     hq.vm.provider :virtualbox do |vb|
       vb.customize [ "modifyvm", :id,
 	"--name", "gitlab_#{box_data['name']}",
