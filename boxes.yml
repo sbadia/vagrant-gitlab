@@ -2,3 +2,9 @@
 debian7:
   name: debian-wheezy-amd64
   url: http://pub.sebian.fr/pub/vagrant/debian-wheezy-amd64.box
+ubuntu12:
+  name: ubuntu-1204
+  url: http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box
+centos64:
+  name: centos-6.4
+  url: http://puppet-vagrant-boxes.puppetlabs.com/centos-63-x64.box
