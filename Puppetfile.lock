@@ -2,14 +2,16 @@ FORGE
   remote: http://forge.puppetlabs.com
   specs:
     evenup/logrotate (1.0.3)
-    fsalum/redis (0.0.8)
-    jfryman/nginx (0.0.6)
+    fsalum/redis (0.0.9)
+    jfryman/nginx (0.0.7)
       puppetlabs/apt (>= 1.0.0)
+      puppetlabs/concat (>= 1.0.0)
       puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/apt (1.4.0)
       puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/concat (1.0.0)
     puppetlabs/git (0.0.3)
-    puppetlabs/mysql (0.6.1)
+    puppetlabs/mysql (2.1.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/ruby (0.1.0)
     puppetlabs/stdlib (4.1.0)
@@ -17,22 +19,22 @@ FORGE
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
-  ref: master
-  sha: aac075328fed1523245c0d84c738686292d55058
+  ref: feature/sbadia/upgrade-mysql
+  sha: 44d9502e74f15871a0d1d6ace9c3e817c771908c
   specs:
     gitlab_requirements (0.0.2)
       evenup/logrotate (>= 1.0.3)
       fsalum/redis (>= 0.0.5)
       jfryman/nginx (>= 0.0.2)
       puppetlabs/git (>= 0.0.2)
-      puppetlabs/mysql (= 0.6.1)
+      puppetlabs/mysql (>= 0.6.1)
       puppetlabs/ruby (>= 0.1.0)
       puppetlabs/stdlib (>= 2.2.1)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: master
-  sha: 7c88958794fb156e08d3bf285f25151ebea1e0cb
+  ref: feature/sbadia/upgrade-to-6.5
+  sha: 81852734b9a5725e7c7fb55efad9df8073899bfd
   specs:
     gitlab (0.1.1)
       puppetlabs/stdlib (>= 3.1.0)
