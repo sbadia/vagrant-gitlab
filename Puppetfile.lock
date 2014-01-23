@@ -19,8 +19,8 @@ FORGE
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
-  ref: feature/sbadia/upgrade-mysql
-  sha: 44d9502e74f15871a0d1d6ace9c3e817c771908c
+  ref: master
+  sha: ed9ce9a74bbaae9c3d581895629bb5a83ee36620
   specs:
     gitlab_requirements (0.0.2)
       evenup/logrotate (>= 1.0.3)
@@ -33,8 +33,8 @@ GIT
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: feature/sbadia/upgrade-to-6.5
-  sha: 81852734b9a5725e7c7fb55efad9df8073899bfd
+  ref: master
+  sha: 4bd0cc18cafeb247c95147c07f74c041bda4cfb6
   specs:
     gitlab (0.1.1)
       puppetlabs/stdlib (>= 3.1.0)
