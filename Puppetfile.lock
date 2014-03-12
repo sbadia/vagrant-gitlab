@@ -2,25 +2,28 @@ FORGE
   remote: http://forge.puppetlabs.com
   specs:
     evenup/logrotate (1.0.3)
-    fsalum/redis (0.0.9)
+    fsalum/redis (0.0.11)
+      thias/sysctl (= 0.3.0)
     jfryman/nginx (0.0.7)
       puppetlabs/apt (>= 1.0.0)
       puppetlabs/concat (>= 1.0.0)
       puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/apt (1.4.0)
+    puppetlabs/apt (1.4.2)
       puppetlabs/stdlib (>= 2.2.1)
-    puppetlabs/concat (1.0.0)
+    puppetlabs/concat (1.1.0-rc1)
+      puppetlabs/stdlib (>= 3.0.0)
     puppetlabs/git (0.0.3)
-    puppetlabs/mysql (2.1.0)
-      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/mysql (2.2.3)
+      puppetlabs/stdlib (>= 3.2.0)
     puppetlabs/ruby (0.1.0)
     puppetlabs/stdlib (4.1.0)
     puppetlabs/vcsrepo (0.2.0)
+    thias/sysctl (0.3.0)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
   ref: master
-  sha: ed9ce9a74bbaae9c3d581895629bb5a83ee36620
+  sha: a70ef46203eca56beed1fb88ff186583cd1a50ca
   specs:
     gitlab_requirements (0.0.2)
       evenup/logrotate (>= 1.0.3)
@@ -34,9 +37,9 @@ GIT
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
   ref: master
-  sha: 4bd0cc18cafeb247c95147c07f74c041bda4cfb6
+  sha: 5ca4ee4808fb55f18ad5a138c87db69066773fb0
   specs:
-    gitlab (0.1.1)
+    gitlab (0.1.2)
       puppetlabs/stdlib (>= 3.1.0)
       puppetlabs/vcsrepo (>= 0.2.0)
 
