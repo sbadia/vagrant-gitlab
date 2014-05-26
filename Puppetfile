@@ -1,8 +1,8 @@
 # Puppetforge modules
 forge 'http://forge.puppetlabs.com'
 
-mod 'gitlab',
+mod 'sbadia/gitlab',
     :git  => 'git://github.com/sbadia/puppet-gitlab.git'
-mod 'gitlab_requirements',
+mod 'sbadia/gitlab_requirements',
     :git  => 'git://github.com/sbadia/puppet-gitlab-requirements'
 
