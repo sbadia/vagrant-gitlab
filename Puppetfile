@@ -7,3 +7,8 @@ mod 'sbadia/gitlab',
 mod 'sbadia/gitlab_requirements',
     :git  => 'git://github.com/sbadia/puppet-gitlab-requirements',
     :ref  => 'gitlab-rbenv'
+
+mod 'alup/rbenv'
+mod 'puppetlabs/stdlib'
+mod 'puppetlabs/vcsrepo'
+mod 'puppetlabs/git'

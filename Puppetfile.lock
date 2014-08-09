@@ -9,24 +9,22 @@ FORGE
       puppetlabs/apt (>= 1.0.0)
       puppetlabs/concat (>= 1.0.0)
       puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/apt (1.5.0)
+    puppetlabs/apt (1.5.2)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/concat (1.1.0)
       puppetlabs/stdlib (>= 4.0.0)
-    puppetlabs/git (0.1.0)
+    puppetlabs/git (0.2.0)
       puppetlabs/vcsrepo (>= 0.1.0)
-    puppetlabs/mysql (2.2.3)
+    puppetlabs/mysql (2.3.1)
       puppetlabs/stdlib (>= 3.2.0)
-    puppetlabs/ruby (0.2.0)
-      puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
-    puppetlabs/stdlib (4.2.2)
-    puppetlabs/vcsrepo (1.0.2)
-    thias/sysctl (0.3.1)
+    puppetlabs/stdlib (4.3.2)
+    puppetlabs/vcsrepo (1.1.0)
+    thias/sysctl (0.3.2)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
   ref: gitlab-rbenv
-  sha: cbb7105ec628539c165faadf4aa4fcdaaa23cb26
+  sha: 129ceff4c711b17abc4f88dbcbb9a5dd2a85ffba
   specs:
     sbadia/gitlab_requirements (0.0.2)
       evenup/logrotate (>= 1.0.3)
@@ -34,21 +32,20 @@ GIT
       jfryman/nginx (>= 0.0.2)
       puppetlabs/git (>= 0.0.2)
       puppetlabs/mysql (>= 0.6.1)
-      puppetlabs/ruby (>= 0.1.0)
       puppetlabs/stdlib (>= 2.2.1)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
   ref: andschwa-rbenv
-  sha: 9d9a91f53b4c67b7a474cf2170cfc7db62236423
+  sha: 510d5f4cca78e2d0f3710032c36e3b9d68fd168b
   specs:
-    sbadia/gitlab (0.1.5)
-      alup/rbenv (>= 1.2.0)
-      puppetlabs/git (>= 0.0.3)
-      puppetlabs/stdlib (>= 3.1.0)
-      puppetlabs/vcsrepo (>= 0.2.0)
+    sbadia/gitlab (0.0.1)
 
 DEPENDENCIES
+  alup/rbenv (>= 0)
+  puppetlabs/git (>= 0)
+  puppetlabs/stdlib (>= 0)
+  puppetlabs/vcsrepo (>= 0)
   sbadia/gitlab (>= 0)
   sbadia/gitlab_requirements (>= 0)
 
