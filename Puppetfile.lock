@@ -24,17 +24,6 @@ FORGE
     thias/sysctl (0.3.1)
 
 GIT
-  remote: git://github.com/andschwa/puppet-gitlab.git
-  ref: rbenv
-  sha: e3c7b21b585b9fcf747482134a9226b7dac75516
-  specs:
-    sbadia/gitlab (0.1.5)
-      alup/rbenv (>= 1.2.0)
-      puppetlabs/git (>= 0.0.3)
-      puppetlabs/stdlib (>= 3.1.0)
-      puppetlabs/vcsrepo (>= 0.2.0)
-
-GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
   ref: gitlab-rbenv
   sha: cbb7105ec628539c165faadf4aa4fcdaaa23cb26
@@ -47,6 +36,17 @@ GIT
       puppetlabs/mysql (>= 0.6.1)
       puppetlabs/ruby (>= 0.1.0)
       puppetlabs/stdlib (>= 2.2.1)
+
+GIT
+  remote: git://github.com/sbadia/puppet-gitlab.git
+  ref: andschwa-rbenv
+  sha: 9d9a91f53b4c67b7a474cf2170cfc7db62236423
+  specs:
+    sbadia/gitlab (0.1.5)
+      alup/rbenv (>= 1.2.0)
+      puppetlabs/git (>= 0.0.3)
+      puppetlabs/stdlib (>= 3.1.0)
+      puppetlabs/vcsrepo (>= 0.2.0)
 
 DEPENDENCIES
   sbadia/gitlab (>= 0)
