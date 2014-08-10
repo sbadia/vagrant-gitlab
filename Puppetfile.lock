@@ -23,7 +23,7 @@ FORGE
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
-  ref: gitlab-rbenv
+  ref: master
   sha: 129ceff4c711b17abc4f88dbcbb9a5dd2a85ffba
   specs:
     sbadia/gitlab_requirements (0.0.2)
@@ -36,8 +36,8 @@ GIT
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: andschwa-rbenv
-  sha: 510d5f4cca78e2d0f3710032c36e3b9d68fd168b
+  ref: master
+  sha: d2b9005e3da57eb662ec5494e4e3efbadc45c509
   specs:
     sbadia/gitlab (0.0.1)
 
