@@ -2,24 +2,33 @@ FORGE
   remote: http://forge.puppetlabs.com
   specs:
     alup/rbenv (1.2.0)
-    evenup/logrotate (1.0.3)
-    fsalum/redis (1.0.0)
+    evenup/logrotate (1.1.0)
+    fsalum/redis (1.0.1)
       thias/sysctl (>= 0.3.0)
-    jfryman/nginx (0.0.9)
+    jfryman/nginx (0.1.1)
       puppetlabs/apt (>= 1.0.0)
-      puppetlabs/concat (>= 1.0.0)
-      puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/apt (1.5.2)
+      puppetlabs/concat (>= 1.1.0)
+      puppetlabs/stdlib (>= 3.0.0)
+      ripienaar/module_data (>= 0.0.3)
+    puppetlabs/apt (1.6.0)
       puppetlabs/stdlib (>= 2.2.1)
-    puppetlabs/concat (1.1.0)
-      puppetlabs/stdlib (>= 4.0.0)
+    puppetlabs/concat (1.1.1)
+      puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
     puppetlabs/git (0.2.0)
       puppetlabs/vcsrepo (>= 0.1.0)
     puppetlabs/mysql (2.3.1)
       puppetlabs/stdlib (>= 3.2.0)
     puppetlabs/stdlib (4.3.2)
     puppetlabs/vcsrepo (1.1.0)
-    thias/sysctl (0.3.2)
+    ripienaar/module_data (0.0.3)
+    thias/sysctl (1.0.0)
+
+GIT
+  remote: git://github.com/frconil/puppet-gitlab.git
+  ref: rbenv_update_hook_fix
+  sha: 90b2cb3cbed2a15e084cd373d1df7bbdbbc8b217
+  specs:
+    sbadia/gitlab (0.0.1)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
@@ -33,13 +42,6 @@ GIT
       puppetlabs/git (>= 0.0.2)
       puppetlabs/mysql (>= 0.6.1)
       puppetlabs/stdlib (>= 2.2.1)
-
-GIT
-  remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: master
-  sha: d2b9005e3da57eb662ec5494e4e3efbadc45c509
-  specs:
-    sbadia/gitlab (0.0.1)
 
 DEPENDENCIES
   alup/rbenv (>= 0)
