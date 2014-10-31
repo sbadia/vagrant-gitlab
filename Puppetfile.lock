@@ -1,51 +1,47 @@
 FORGE
-  remote: http://forge.puppetlabs.com
+  remote: https://forgeapi.puppetlabs.com
   specs:
-    alup/rbenv (1.2.0)
-    evenup/logrotate (1.0.3)
-    fsalum/redis (1.0.0)
-      thias/sysctl (>= 0.3.0)
-    jfryman/nginx (0.0.9)
-      puppetlabs/apt (>= 1.0.0)
-      puppetlabs/concat (>= 1.0.0)
-      puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/apt (1.5.2)
-      puppetlabs/stdlib (>= 2.2.1)
-    puppetlabs/concat (1.1.0)
-      puppetlabs/stdlib (>= 4.0.0)
-    puppetlabs/git (0.2.0)
-      puppetlabs/vcsrepo (>= 0.1.0)
-    puppetlabs/mysql (2.3.1)
-      puppetlabs/stdlib (>= 3.2.0)
-    puppetlabs/stdlib (4.3.2)
-    puppetlabs/vcsrepo (1.1.0)
-    thias/sysctl (0.3.2)
+    alup-rbenv (1.2.0)
+    evenup-logrotate (1.2.0)
+    fsalum-redis (1.0.2)
+      thias-sysctl (>= 0.3.0)
+    jfryman-nginx (0.1.1)
+      puppetlabs-apt (>= 1.0.0)
+      puppetlabs-concat (>= 1.1.0)
+      puppetlabs-stdlib (>= 3.0.0)
+      ripienaar-module_data (>= 0.0.3)
+    puppetlabs-apt (1.7.0)
+      puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-concat (1.1.2)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs-git (0.2.0)
+      puppetlabs-vcsrepo (>= 0.1.0)
+    puppetlabs-mysql (2.3.1)
+      puppetlabs-stdlib (>= 3.2.0)
+    puppetlabs-stdlib (4.3.2)
+    puppetlabs-vcsrepo (1.1.0)
+    ripienaar-module_data (0.0.3)
+    sbadia-gitlab (0.1.5)
+      puppetlabs-git (>= 0.0.3)
+      puppetlabs-stdlib (>= 3.1.0)
+      puppetlabs-vcsrepo (>= 0.2.0)
+    thias-sysctl (1.0.0)
 
 GIT
   remote: git://github.com/sbadia/puppet-gitlab-requirements
   ref: master
-  sha: 129ceff4c711b17abc4f88dbcbb9a5dd2a85ffba
+  sha: 30f547d6a51815e5f9adc661bb839194b4efd34d
   specs:
-    sbadia/gitlab_requirements (0.0.2)
-      evenup/logrotate (>= 1.0.3)
-      fsalum/redis (>= 0.0.5)
-      jfryman/nginx (>= 0.0.2)
-      puppetlabs/git (>= 0.0.2)
-      puppetlabs/mysql (>= 0.6.1)
-      puppetlabs/stdlib (>= 2.2.1)
-
-GIT
-  remote: git://github.com/sbadia/puppet-gitlab.git
-  ref: master
-  sha: d2b9005e3da57eb662ec5494e4e3efbadc45c509
-  specs:
-    sbadia/gitlab (0.0.1)
+    sbadia-gitlab_requirements (0.0.2)
+      evenup-logrotate (>= 1.0.3)
+      fsalum-redis (>= 0.0.5)
+      jfryman-nginx (>= 0.0.2)
+      puppetlabs-git (>= 0.0.2)
+      puppetlabs-mysql (>= 0.6.1)
+      puppetlabs-stdlib (>= 2.2.1)
 
 DEPENDENCIES
-  alup/rbenv (>= 0)
-  puppetlabs/git (>= 0)
-  puppetlabs/stdlib (>= 0)
-  puppetlabs/vcsrepo (>= 0)
-  sbadia/gitlab (>= 0)
-  sbadia/gitlab_requirements (>= 0)
+  alup-rbenv (>= 0)
+  sbadia-gitlab (>= 0)
+  sbadia-gitlab_requirements (>= 0)
 
