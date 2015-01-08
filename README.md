@@ -4,7 +4,7 @@ This is a fork from https://github.com/mc0e/puppet-gitlab.git, which builds
 gitlab from the ground up as a virtual machine using vagrant.
 
 I want to make the gitlab specific part modular so it can be used with a puppet
-build alongsideother configuration.
+build along side other configuration.
 
 The idea is to split sbadia's project into 3 parts.
 
@@ -19,15 +19,15 @@ The idea is to split sbadia's project into 3 parts.
 
 After cloning this repository, you will have to
 
-    gem install librarian-puppet
+    gem install --no-ri --no-rdoc librarian-puppet puppet
 
 or  (on jessie)
 
-    apt-get install librarian-puppet
+    apt-get install librarian-puppet puppet
 
 or (on arch, with AUR)
 
-    pacman -Syu librarian-puppet
+    pacman -Syu librarian-puppet puppet
 
 and
 
